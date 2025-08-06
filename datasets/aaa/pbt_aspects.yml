@@ -1,0 +1,60 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: Empno
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each employee
+      mappings: []
+      tags: []
+  - name: Ename
+    type: string
+    nullable: true
+    metadata:
+      description: The name of the employee
+      mappings: []
+      tags: []
+  - name: Job
+    type: string
+    nullable: true
+    metadata:
+      description: The job title or position of the employee
+      mappings: []
+      tags: []
+  - name: Mgr
+    type: string
+    nullable: true
+    metadata:
+      description: The manager associated with the employee
+      mappings: []
+      tags: []
+  - name: Hiredate
+    type: string
+    nullable: true
+    metadata:
+      description: The date when the employee was hired, represented as a string
+      mappings: []
+      tags: []
+  - name: salary
+    type: string
+    nullable: true
+    metadata:
+      description: The salary amount of the employee as a string
+      mappings: []
+      tags: []
+  - name: comm
+    type: string
+    nullable: true
+    metadata:
+      description: Commission earned by the employee as a string
+      mappings: []
+      tags: []
+  - name: deptno
+    type: string
+    nullable: true
+    metadata:
+      description: Department number where the employee is assigned
+      mappings: []
+      tags: []

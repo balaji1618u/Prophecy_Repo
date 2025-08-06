@@ -1,0 +1,251 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.11.1",
+        "pyPiVersion" : "2.0.11"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/Git_pipeline",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "Git_pipeline",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "31991",
+    "frontEndLanguage" : "sql",
+    "mode" : "stream",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "veerabalajikumar123gmailcomteam.gitproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "git_pipeline",
+    "configTopLevelPackage" : "git_pipeline",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "D_A0QUtj3m4OttddjrTSK$$eaXqb5f3OsLJzNluUSJou",
+    "source" : "LgLvfx6Ur7qsGOyn4KDHV$$jahdLBwLz1utaiy-bWGkZ",
+    "sourcePort" : "hlzRyQgyTSgyZTC5VFUru$$c5GRivvtXMmDa3-zXW8O7",
+    "target" : "j3MZwInKZnDIVFEihE1TR$$2oubNGUUgbKuHPmXeQxKn",
+    "targetPort" : "ZNGH7WME-RO7pPPG3uKpv$$gX7PXzsDzD8jQXB6i70il"
+  } ],
+  "processes" : {
+    "LgLvfx6Ur7qsGOyn4KDHV$$jahdLBwLz1utaiy-bWGkZ" : {
+      "id" : "LgLvfx6Ur7qsGOyn4KDHV$$jahdLBwLz1utaiy-bWGkZ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "aaa",
+        "slug" : "aaa",
+        "x" : -680,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "hlzRyQgyTSgyZTC5VFUru$$c5GRivvtXMmDa3-zXW8O7",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/aaa"
+      }
+    },
+    "j3MZwInKZnDIVFEihE1TR$$2oubNGUUgbKuHPmXeQxKn" : {
+      "id" : "j3MZwInKZnDIVFEihE1TR$$2oubNGUUgbKuHPmXeQxKn",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_employee_by_id",
+        "slug" : "filter_employee_by_id",
+        "x" : -460,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZNGH7WME-RO7pPPG3uKpv$$gX7PXzsDzD8jQXB6i70il",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Empno",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Ename",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Job",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The job title or position of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Mgr",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The manager associated with the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Hiredate",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date when the employee was hired, represented as a string",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "salary",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The salary amount of the employee as a string",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "comm",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Commission earned by the employee as a string",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "deptno",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Department number where the employee is assigned",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "AdLjClupQKeweCwL65g-X$$aD0b8VMaRZZXRZTqZaEN_",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "ZNGH7WME-RO7pPPG3uKpv$$gX7PXzsDzD8jQXB6i70il##Empno" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "Empno='7369'"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
